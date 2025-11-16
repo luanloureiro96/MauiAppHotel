@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.TabelaPreco"
+             Title="TabelaPreco"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="AntiqueWhite">
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Tabela de Preço" TextColor="Firebrick" FontSize="50" FontFamily="Lobster"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Frame Padding="10" Margin="50">
+            <Grid RowDefinitions="auto, auto, auto, auto, auto" ColumnDefinitions="*, *, *">
+                <Label Grid.Row="0" Grid.Column="0" Text="Suíte:" TextColor = "Brown" FontSize="18"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Suíte Crise"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Suíte Single"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Suíte Luxo"/>
+                <Label Grid.Row="4" Grid.Column="0" Text="Suíte Super Luxo"/>
+
+                <Label Grid.Row="0" Grid.Column="1" Text="Adulto:" TextColor = "Brown" FontSize="18"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="110,00R$"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="80,00 R$"/>
+                <Label Grid.Row="3" Grid.Column="1" Text="50,00 R$"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="25,00 R$"/>
+
+                <Label Grid.Row="0" Grid.Column="2" Text="Criança:" TextColor = "Brown" FontSize="18"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="55,00R$"/>
+                <Label Grid.Row="2" Grid.Column="2" Text="40,00 R$"/>
+                <Label Grid.Row="3" Grid.Column="2" Text="25,00 R$"/>
+                <Label Grid.Row="4" Grid.Column="2" Text="12,50 R$"/>
+            </Grid>
+        </Frame>
+
+        <Button HorizontalOptions="Center" Text = "Voltar" Clicked="Button_Clicked" BackgroundColor="Brown" BorderColor="Black" BorderWidth="5"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>
