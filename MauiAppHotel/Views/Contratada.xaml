@@ -7,28 +7,28 @@
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
-        <Label Text="Suíte Super Luxo"
+        <Label Text="{Binding QuartoSelecionado.Descricao}"
                TextColor="Firebrick"
                FontFamily="Lobster"
                FontSize="50"
                HorizontalTextAlignment="Center"/>
 
         <Frame Margin="10">
-            <HorizontalStackLayout>
-                
-                <HorizontalStackLayout>
+            <StackLayout Orientation="Horizontal">
+            
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Adultos:  " />
-                    <Label Text="2"
+                    <Label Text="{Binding QntAdultos}"
                            TextColor="Firebrick"/>
                 </HorizontalStackLayout>
                 
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças:  " />
-                    <Label Text="1"
+                    <Label Text="{Binding QntCriancas}"
                            TextColor="Firebrick"/>
                 </HorizontalStackLayout>
                 
-            </HorizontalStackLayout>
+            </StackLayout>
         </Frame>
 
         <Frame Margin="10">
@@ -39,17 +39,26 @@
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-Out:"/>
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="20/10/2025"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="30/10/2025"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="10 dias"/>
+                <Label Grid.Row="1" Grid.Column="0" 
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyy}'}"
+                       TextColor="Firebrick"/>
+                
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyy}'}"
+                       TextColor="Firebrick"/>
+                
+                <Label Grid.Row="1" Grid.Column="2" 
+                       Text="{Binding Estadia}"
+                       TextColor="Firebrick"/>
 
             </Grid>
         </Frame>
 
         <Frame Margin="10">
-            <HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                 <Label Text="Valor Total: "/>
-                <Label Text="750,00 R$"/>
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}}"
+                       TextColor="Firebrick"/>
             </HorizontalStackLayout>
         </Frame>
 
